@@ -21,9 +21,17 @@ $CHINESE_BLACK: #0F1420;
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   padding: 24px 91px 21px 81px;
   background-color: $BLACK;
+  
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1086px;
+    width: 100%;
+  }
 
   @include tablet {
     padding: 28px 50px 28px 30px;
@@ -38,6 +46,10 @@ $CHINESE_BLACK: #0F1420;
   display: flex;
   align-items: center;
   gap: 53px;
+
+  & > li {
+    cursor: pointer;
+  }
 }
 
 .text-link {
@@ -45,10 +57,19 @@ $CHINESE_BLACK: #0F1420;
   font-family: Lato;
   font-size: 18px;
   text-decoration: none;
-  transition: all 0.3s;
-  
-  // &:hover {
-  // }
+  background-image: -webkit-linear-gradient(left, $CHARTREUSE 0%, $ROSE_PINK 25%, $WHITE 25%);
+  background-image: linear-gradient(90deg, $CHARTREUSE 0%, $ROSE_PINK 25%, $WHITE 25%);
+  background-position: right center;
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  transition: background-position 0.3s ease-in-out;
+
+  &:hover {
+    background-position: left center;
+  }
 }
 
 .text {
@@ -113,6 +134,8 @@ $CHINESE_BLACK: #0F1420;
   }
   
   & > div:last-child {
+    display: flex;
+    justify-content: flex-end;
     max-height: 367px;
   
     & > img {
@@ -273,5 +296,20 @@ $CHINESE_BLACK: #0F1420;
     &:hover {
       color: rgba($CHARTREUSE, 0.6)
     }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 19px;
+  background-color: $BLACK;
+
+  & > p {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 28px;
   }
 }

@@ -1,40 +1,55 @@
-import React from 'react';
+import React, { useRef } from "react";
 
 import logo from "./assets/icons/logoIcon.svg";
 import cartIcon from "./assets/icons/cartIcon.svg";
+import rocketIcon from "./assets/icons/rocketIcon.svg";
 import earth from "./assets/images/earth.webp";
-import cardBackground1 from './assets/images/background2.webp';
-import cardBackground2 from './assets/images/background3.webp';
-import cardBackground3 from './assets/images/background4.webp';
-import cardBackground4 from './assets/images/background5.webp';
+import cardBackground1 from "./assets/images/background2.webp";
+import cardBackground2 from "./assets/images/background3.webp";
+import cardBackground3 from "./assets/images/background4.webp";
+import cardBackground4 from "./assets/images/background5.webp";
 
 import "./App.scss";
 
 const App = () => {
+  const homeSection = useRef(null);
+  const productsSection = useRef(null);
+
+  const handleScrollToSection = (refElement) => {
+    const el = refElement.current ? refElement.current : refElement;
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  };
+
   return (
     <div className="App">
       <header className="header">
-        <div className="logo">
-          <img src={logo} alt="logo" />
+        <div>
+          <div className="logo">
+            <img src={logo} alt="logo" />
+          </div>
+          <nav className="navbar">
+            <li onClick={() => handleScrollToSection(homeSection)}>
+              <a href="#home" className="text-link">Home</a>  
+            </li>
+            <li onClick={() => handleScrollToSection(homeSection)}>
+              <a href="#products" className="text-link">Products</a>
+            </li>
+            <li>
+              <a>
+                <img src={cartIcon} alt="cart" />
+              </a>
+            </li>
+          </nav>
         </div>
-        <nav className="navbar">
-          <li>
-            <a href="#home" className="text-link">Home</a>  
-          </li>
-          <li>
-            <a href="#products" className="text-link">Products</a>
-          </li>
-          <li>
-            <a>
-              <img src={cartIcon} alt="cart" />
-            </a>
-          </li>
-        </nav>
       </header>
 
       <main>
         {/* BANNER */}
-        <section className="banner">
+        <section ref={homeSection} id="#home" className="banner">
           <div className="banner--content__container">
             <div className="banner__heading">
               <h1 className="text__heading__banner">Discover the vast expanses of <span className="text--highlighted">space</span></h1>
@@ -51,7 +66,7 @@ const App = () => {
         </section>
         
         {/* OFFERS */}
-        <section className="offers__section">
+        <section ref={productsSection} id="#products" className="offers__section">
           <div className="offers__section--container">
             <h2 className="text__subheading">Offers</h2>
             
@@ -119,8 +134,9 @@ const App = () => {
         </section>
       </main>
 
-      <footer>
-
+      <footer className="footer">
+        <img src={rocketIcon} alt="" />
+        <p className="text--highlighted--variant">Exciting space adventure!</p>
       </footer>
     </div>
   );
