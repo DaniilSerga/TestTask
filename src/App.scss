@@ -5,9 +5,10 @@ $CHARTREUSE: #EBFF00;
 $POLICE_BLUE: #304571;
 $BLACK: #000000;
 $WHITE: #FFFFFF;
+$CHINESE_BLACK: #0F1420;
 
 @mixin tablet {
-  @media (max-width: 1248px) {
+  @media (max-width: 1247px) {
     @content;
   }
 }
@@ -66,13 +67,13 @@ $WHITE: #FFFFFF;
   transition: color 0.3s;
 }
 
-.text___heading__banner {
+.text__heading__banner {
   color: $WHITE;
   font-size: 72px;
   font-weight: 800;
 }
 
-.text___subheading__banner {
+.text__subheading {
   color: $WHITE;
   font-size: 32px;
   font-weight: 800;
@@ -87,15 +88,21 @@ $WHITE: #FFFFFF;
 }
 
 .banner {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 59px 0 64px 0;
   background: url('./assets/images/background1.webp');
-  background-position: top -60px left 0;
+  // background-position: top -60px left 0;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+
+.banner--content__container {
+  display: flex;
+  justify-content: space-between;
+  width: 1086px;
 
   & > div:first-child {
     display: flex;
@@ -104,10 +111,10 @@ $WHITE: #FFFFFF;
     gap: 22px;
     max-width: 693px;
   }
-
+  
   & > div:last-child {
     max-height: 367px;
-
+  
     & > img {
       height: 100%;
       width: auto;
@@ -135,6 +142,109 @@ $WHITE: #FFFFFF;
   }
 }
 
+.button__outlined {
+  @extend .button;
+
+  background-color: transparent;
+  // border-color: $CHARTREUSE;
+  // border-width: 2px;
+  outline: none;
+  border: 2px solid $CHARTREUSE; 
+
+  & > span {
+    color: $CHARTREUSE;
+  }
+}
+
 .offers__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 58px 80px 60px;
+  background-color: $POLICE_BLUE;
+
+  & > h2 {
+    align-self: flex-start;
+  }
+}
+
+.offers__section--container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1086px;
+}
+
+.offers__list {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  & > div:first-child,
+  & > div:last-child {
+    width: 100%;
+    padding: 36px 35px 37px;
+    border-radius: 10px;
+
+    & > h3 {
+      @extend .text--bold;
+      font-size: 74px;
+    }
+
+    & > h4 {
+      @extend .text--bold;
+      font-size: 26px;
+    }
+  }
+
+  & > div:not(:first-child):not(:last-child) {
+    width: 453px;
+    padding: 49px 35px 36px;
+    border-radius: 10px;
+
+    & > h3 {
+      @extend .text--bold;
+      font-size: 46px;
+    }
+
+    & > h4 {
+      @extend .text--bold;
+      font-size: 24px;
+    }
+  }
+}
+
+.offer__card {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: flex-start;
+  position: relative;
+  max-height: 350px;
+  overflow: hidden;
+
+  & > h3,
+  & > h4,
+  & > button {
+    z-index: 1;
+  }
+
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.offer_card__overlay {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-90deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%);
 }
