@@ -42,8 +42,8 @@ const App = () => {
         </section>
         
         {/* OFFERS */}
-        <section>
-
+        <section className="offers__section">
+          
         </section>
       </main>
 
