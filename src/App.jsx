@@ -85,14 +85,14 @@ const App = () => {
             
             <div className="offers__list">
                 <div className="offer__card">
-                  <h3>Move the borders of reality!</h3>
+                  <h3>Move the borders<br/>of reality!</h3>
                   <h4>Go on a space adventure - it's possible with us!</h4>
 
                   <button className="button__outlined">
                     <span>Learn more</span>
                   </button>
 
-                  <img src={cardBackground1} alt="background" />
+                  {/* <img src={cardBackground1} alt="background" /> */}
                   <div className="offer_card__overlay"></div>
                 </div>
                 <div className="offer__card">
@@ -103,7 +103,7 @@ const App = () => {
                     <span>Learn more</span>
                   </button>
 
-                  <img src={cardBackground2} alt="background" />
+                  {/* <img src={cardBackground2} alt="background" /> */}
                   <div className="offer_card__overlay"></div>
                 </div>
                 <div className="offer__card">
@@ -114,7 +114,7 @@ const App = () => {
                     <span>Learn more</span>
                   </button>
 
-                  <img src={cardBackground3} alt="background" />
+                  {/* <img src={cardBackground3} alt="background" /> */}
                   <div className="offer_card__overlay"></div>
                 </div>
                 <div className="offer__card">
@@ -125,7 +125,7 @@ const App = () => {
                     <span>Learn more</span>
                   </button>
 
-                  <img src={cardBackground4} alt="background" />
+                  {/* <img src={cardBackground4} alt="background" /> */}
                   <div className="offer_card__overlay"></div>
                 </div>
             </div>
