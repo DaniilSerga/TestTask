@@ -72,8 +72,6 @@ const App = () => {
               <img src={earth} alt="Earth" />
             </div>
           </div>
-
-          <div className="banner--overlay"></div>
         </section>
         
         {/* OFFERS */}
@@ -88,7 +86,6 @@ const App = () => {
                 <button className="button__outlined">
                   <span>Learn more</span>
                 </button>
-                <div className="offer_card__overlay"></div>
               </div>
               <div className="offer__card">
                 <h3>Space is not<br/>just stars and<br/>planets</h3>
@@ -96,7 +93,6 @@ const App = () => {
                 <button className="button__outlined">
                   <span>Learn more</span>
                 </button>
-                <div className="offer_card__overlay"></div>
               </div>
               <div className="offer__card">
                 <h3>For those<br/>who dream<br/>of stars</h3>
@@ -104,7 +100,6 @@ const App = () => {
                 <button className="button__outlined">
                   <span>Learn more</span>
                 </button>
-                <div className="offer_card__overlay"></div>
               </div>
               <div className="offer__card">
                 <h3>Fulfill your<br/>fantastic dreams</h3>
@@ -112,7 +107,6 @@ const App = () => {
                 <button className="button__outlined">
                   <span>Learn more</span>
                 </button>
-                <div className="offer_card__overlay"></div>
               </div>
             </div>
 
