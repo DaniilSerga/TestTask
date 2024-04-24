@@ -29,7 +29,70 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
 
 main {
   background: linear-gradient(196.2deg, #0D1E48 0%, #304571 100%);
+
+  @include mobile {
+    padding-top: 48px;
+  }
 }
+
+// ------------------------------------------------------------------
+
+#menu__toggle,
+.menu__btn {
+  display: none;
+
+  @include mobile {
+    display: inline;
+  }
+}
+
+.navbar__wrapper #menu__toggle  {
+  visibility: hidden;
+
+  & ~ label {
+    position: fixed;
+    top: 5px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  &:checked ~ .menu__btn {
+    & > img:first-child {
+      display: none;
+    }
+
+    & > img:last-child {
+      display: inline;
+    }
+  }
+
+  & ~ .menu__btn {
+    & > img:first-child {
+      display: inline;
+    }
+
+    & > img:last-child {
+      display: none;
+    }
+  }
+
+  &:checked ~ .navbar {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(190.34deg, #0D1E48 0.28%, #304571 100%);
+  }
+}
+
+// ------------------------------------------------------------------
+
 
 .header {
   display: flex;
@@ -40,6 +103,7 @@ main {
   
   & > div {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     max-width: 1088px;
     width: 100%;
@@ -54,7 +118,10 @@ main {
   }
 
   @include mobile {
-    padding: 20px 12px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 12px 20px;
   }
 }
 
@@ -81,6 +148,10 @@ main {
 
   & > li {
     cursor: pointer;
+  }
+
+  @include mobile {
+    display: none;
   }
 }
 
