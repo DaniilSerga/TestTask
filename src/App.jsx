@@ -3,10 +3,6 @@ import React, { useRef } from "react";
 import logo from "./assets/icons/logoIcon.svg";
 import rocketIcon from "./assets/icons/rocketIcon.svg";
 import earth from "./assets/images/earth.webp";
-import cardBackground1 from "./assets/images/cardBackground1.webp";
-import cardBackground2 from "./assets/images/cardBackground2.webp";
-import cardBackground3 from "./assets/images/cardBackground3.webp";
-import cardBackground4 from "./assets/images/cardBackground4.webp";
 
 import "./App.scss";
 
@@ -62,10 +58,10 @@ const App = () => {
 
       <main>
         {/* BANNER */}
-        <section ref={homeSection} id="#home" className="banner">
+        <section ref={homeSection} className="banner">
           <div className="banner__content-container">
             <div>
-              <h1 className="banner__text-heading">Discover the vast expanses of <span className="text--highlighted">space</span></h1>
+              <h1 className="banner__text-heading">Discover the vast<br/>expanses of <span className="text--highlighted">space</span></h1>
               <h2 className="text-subheading">Where the possibilities are <span className="text--highlighted--variant">endless!</span></h2>
               <button className="button">
                 <span>Learn more</span>
@@ -76,62 +72,52 @@ const App = () => {
               <img src={earth} alt="Earth" />
             </div>
           </div>
+
+          <div className="banner--overlay"></div>
         </section>
         
         {/* OFFERS */}
-        <section ref={productsSection} id="#products" className="offers__section">
+        <section ref={productsSection} className="offers__section">
           <div className="offers__section--container">
-            <h2 className="text-subheading">Offers</h2>
+            <h2>Offers</h2>
             
             <div className="offers__list">
-                <div className="offer__card">
-                  <h3>Move the borders<br/>of reality!</h3>
-                  <h4>Go on a space adventure - it's possible with us!</h4>
-
-                  <button className="button__outlined">
-                    <span>Learn more</span>
-                  </button>
-
-                  {/* <img src={cardBackground1} alt="background" /> */}
-                  <div className="offer_card__overlay"></div>
-                </div>
-                <div className="offer__card">
-                  <h3>Space is not<br/>just stars and<br/>planets</h3>
-                  <h4>Go on a space adventure</h4>
-
-                  <button className="button__outlined">
-                    <span>Learn more</span>
-                  </button>
-
-                  {/* <img src={cardBackground2} alt="background" /> */}
-                  <div className="offer_card__overlay"></div>
-                </div>
-                <div className="offer__card">
-                  <h3>For those<br/>who dream<br/>of stars</h3>
-                  <h4>Our offer: make your dream come true</h4>
-
-                  <button className="button__outlined">
-                    <span>Learn more</span>
-                  </button>
-
-                  {/* <img src={cardBackground3} alt="background" /> */}
-                  <div className="offer_card__overlay"></div>
-                </div>
-                <div className="offer__card">
-                  <h3>Fulfill your<br/>fantastic dreams</h3>
-                  <h4>Space has never been so close</h4>
-
-                  <button className="button__outlined">
-                    <span>Learn more</span>
-                  </button>
-
-                  {/* <img src={cardBackground4} alt="background" /> */}
-                  <div className="offer_card__overlay"></div>
-                </div>
+              <div className="offer__card">
+                <h3>Move the borders<br/>of reality!</h3>
+                <h4>Go on a space adventure <span>- it's possible with us!</span></h4>
+                <button className="button__outlined">
+                  <span>Learn more</span>
+                </button>
+                <div className="offer_card__overlay"></div>
+              </div>
+              <div className="offer__card">
+                <h3>Space is not<br/>just stars and<br/>planets</h3>
+                <h4>Go on a space adventure</h4>
+                <button className="button__outlined">
+                  <span>Learn more</span>
+                </button>
+                <div className="offer_card__overlay"></div>
+              </div>
+              <div className="offer__card">
+                <h3>For those<br/>who dream<br/>of stars</h3>
+                <h4>Our offer: make your dream come true</h4>
+                <button className="button__outlined">
+                  <span>Learn more</span>
+                </button>
+                <div className="offer_card__overlay"></div>
+              </div>
+              <div className="offer__card">
+                <h3>Fulfill your<br/>fantastic dreams</h3>
+                <h4>Space has never been so close</h4>
+                <button className="button__outlined">
+                  <span>Learn more</span>
+                </button>
+                <div className="offer_card__overlay"></div>
+              </div>
             </div>
 
             <div className="offers__section--info">
-              <h2 className="text-subheading">Embark on a space journey</h2>
+              <h2>Embark on a space journey</h2>
               <p>
                 Travelling into space is one of the most exciting and unforgettable adventures 
                 that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, 

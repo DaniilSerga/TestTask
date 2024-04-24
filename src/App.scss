@@ -10,6 +10,11 @@
   }
 }
 
+@mixin card-background {
+  background-position: center center;
+  background-size: cover;
+}
+
 $ROSE_PINK: #FF70D9;
 $CHARTREUSE: #EBFF00;
 $POLICE_BLUE: #304571;
@@ -21,6 +26,10 @@ $cardBackground1: url('./assets/images/cardBackground1.webp');
 $cardBackground2: url('./assets/images/cardBackground2.webp');
 $cardBackground3: url('./assets/images/cardBackground3.webp');
 $cardBackground4: url('./assets/images/cardBackground4.webp');
+
+main {
+  background: linear-gradient(196.2deg, #0D1E48 0%, #304571 100%);
+}
 
 .header {
   display: flex;
@@ -38,10 +47,29 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
 
   @include tablet {
     padding: 28px 50px 28px 30px;
+
+    & > div {
+      max-width: 688px;
+    }
   }
 
   @include mobile {
     padding: 20px 12px;
+  }
+}
+
+.logo {
+  max-height: 35.11px;
+  max-width: 104px;
+
+  & > img {
+    max-height: 100%;
+    width: 100%;
+  }
+
+  @include tablet {
+    max-height: 24px;
+    max-width: 71.1px;
   }
 }
 
@@ -80,6 +108,7 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   color: $WHITE;
   font-family: Lato;
   font-size: 18px;
+  line-height: 21.6px;
   text-decoration: none;
   background-image: -webkit-linear-gradient(left, $CHARTREUSE 0%, $ROSE_PINK 25%, $WHITE 25%);
   background-image: linear-gradient(90deg, $CHARTREUSE 0%, $ROSE_PINK 25%, $WHITE 25%);
@@ -93,6 +122,10 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
 
   &:hover {
     background-position: left center;
+  }
+
+  @include tablet {
+    font-weight: 800;
   }
 }
 
@@ -116,12 +149,23 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   color: $WHITE;
   font-size: 72px;
   font-weight: 800;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 48px;
+  }
 }
 
 .text-subheading {
   color: $WHITE;
   font-size: 32px;
   font-weight: 800;
+  line-height: 38.4px;
+
+  @include tablet {
+    font-size: 22px;
+    line-height: 26.4px;
+  }
 }
 
 .text--highlighted {
@@ -133,6 +177,7 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
 }
 
 .banner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,10 +185,26 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   background: url('./assets/images/background.webp');
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
 
+  @include tablet {
+    padding: 100px 30px;
+    align-items: flex-start;
+  }
+}
+
+.banner--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -0.52%, rgba(15, 20, 32, 0.79) 99.48%);
 }
 
 .banner__content-container {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   width: 1088px;
@@ -162,8 +223,25 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
     max-height: 367px;
   
     & > img {
-      height: 100%;
+      max-height: 100%;
       width: auto;
+    }
+  }
+
+  @include tablet {
+    max-width: 709px;
+
+    & > div:last-child {
+      position: absolute;
+      top: -74px;
+      right: -100px;
+      max-height: 336px;
+      max-width: 299.5px;
+
+      & > img {
+        max-height: 100%;
+        max-width: 100%;
+      }
     }
   }
 }
@@ -198,6 +276,16 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   & > span {
     color: $CHARTREUSE;
   }
+
+  @include tablet {
+    padding: 7px 40px;
+
+    & > span {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19.2px;
+    }
+  }
 }
 
 .offers__section {
@@ -205,10 +293,9 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   align-items: center;
   justify-content: center;
   padding: 58px 80px 60px;
-  background-color: $POLICE_BLUE;
 
-  & > h2 {
-    align-self: flex-start;
+  @include tablet {
+    padding: 55px 30px 53px; 
   }
 }
 
@@ -217,6 +304,26 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   flex-direction: column;
   gap: 40px;
   max-width: 1088px;
+
+  & > h2 {
+    color: $WHITE;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 38.4px;
+    text-align: left;
+  }
+
+  @include tablet {
+    max-width: 709px;
+    gap: 30px;
+
+    & > h2 {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 28.8px;
+      text-align: left;
+    }
+  }
 }
 
 .offers__list {
@@ -224,29 +331,26 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   gap: 40px;
   flex-wrap: wrap;
   justify-content: space-between;
+  // align-items: center;
   
   & > div:nth-child(1) {
     background-image: $cardBackground1;
-    background-position: center center;
-    background-size: cover;
+    @include card-background;
   }
   
   & > div:nth-child(2) {
     background-image: $cardBackground2;
-    background-position: center center;
-    background-size: cover;
+    @include card-background;
   }
 
   & > div:nth-child(3) {
     background-image: $cardBackground3;
-    background-position: center center;
-    background-size: cover;
+    @include card-background;
   }
 
   & > div:nth-child(4) {
     background-image: $cardBackground4;
-    background-position: center center;
-    background-size: cover;
+    @include card-background;
   }
 
   & > div:first-child,
@@ -267,12 +371,9 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
       line-height: 31.2px;
     }
 
-    & > img {
-      position: absolute;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: auto;
+    @include tablet {
+      width: unset;
+      padding: unset;
     }
   }
 
@@ -290,13 +391,32 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
       @extend .text--bold;
       font-size: 24px;
     }
+  }
 
-    & > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    & > div:first-child > h4 > span {
+      display: none;
+    }
+    & > div {
+      max-width: 287px !important;
+      // height: 350px !important;
+      padding: 107px 26px 27px !important;
+
+      & > h3 {
+        font-size: 40px !important;
+        font-weight: 800 !important;
+        line-height: 40px !important;
+      }
+
+      & > h4 {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        line-height: 19.2px !important;
+      }
     }
   }
 }
@@ -323,13 +443,21 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(-90deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%);
+  background: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%);
 }
 
 .offers__section--info {
   display: flex;
   flex-direction: column;
   gap: 17px;
+  margin-top: 22px;
+
+  & > h2 {
+    color: $WHITE;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 38.4px;
+  }
 
   & > p {
     color: rgba($WHITE, 0.6);
@@ -339,7 +467,6 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
   }
 
   & > span {
-    width: fit-content;
     cursor: pointer;
     color: $CHARTREUSE;
     font-size: 20px;
@@ -349,6 +476,25 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
 
     &:hover {
       color: rgba($CHARTREUSE, 0.6)
+    }
+  }
+
+  @include tablet {
+    & > h2 {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 28.8px;
+    }
+
+    & > p {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+
+    & > span {
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 19.2px;
     }
   }
 }
@@ -365,5 +511,9 @@ $cardBackground4: url('./assets/images/cardBackground4.webp');
     font-size: 18px;
     font-weight: 800;
     line-height: 28px;
+  }
+
+  @include tablet {
+    padding-bottom: 18px;
   }
 }
