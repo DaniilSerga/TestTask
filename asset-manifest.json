@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Go/static/css/main.595ba659.css",
-    "main.js": "/Go/static/js/main.90451fed.js",
-    "static/media/background.webp": "/Go/static/media/background.11732c5e5d49646804f2.webp",
-    "static/media/rocketIcon.svg": "/Go/static/media/rocketIcon.a4389852c90b9d43571cac86eea0e8ab.svg",
-    "static/media/cardBackground4.webp": "/Go/static/media/cardBackground4.0fd3697be3b44a1d0235.webp",
-    "static/media/cardBackground3.webp": "/Go/static/media/cardBackground3.3c8cde4df95002f5d0c0.webp",
-    "static/media/cardBackground1.webp": "/Go/static/media/cardBackground1.407b27479f5e28f20455.webp",
-    "static/media/cardBackground2.webp": "/Go/static/media/cardBackground2.fccccb79d880ba09210a.webp",
-    "static/media/earth.webp": "/Go/static/media/earth.619579a6993220b2e60c.webp",
-    "static/media/logoIcon.svg": "/Go/static/media/logoIcon.f4153131d3955bdfa609912a9f3b5caf.svg",
-    "index.html": "/Go/index.html",
-    "main.595ba659.css.map": "/Go/static/css/main.595ba659.css.map",
-    "main.90451fed.js.map": "/Go/static/js/main.90451fed.js.map"
+    "main.css": "/TestTask/static/css/main.d249e1aa.css",
+    "main.js": "/TestTask/static/js/main.0e03669f.js",
+    "static/media/background.webp": "/TestTask/static/media/background.11732c5e5d49646804f2.webp",
+    "static/media/rocketIcon.svg": "/TestTask/static/media/rocketIcon.a4389852c90b9d43571cac86eea0e8ab.svg",
+    "static/media/cardBackground4.webp": "/TestTask/static/media/cardBackground4.0fd3697be3b44a1d0235.webp",
+    "static/media/cardBackground3.webp": "/TestTask/static/media/cardBackground3.3c8cde4df95002f5d0c0.webp",
+    "static/media/cardBackground1.webp": "/TestTask/static/media/cardBackground1.407b27479f5e28f20455.webp",
+    "static/media/cardBackground2.webp": "/TestTask/static/media/cardBackground2.fccccb79d880ba09210a.webp",
+    "static/media/earth.webp": "/TestTask/static/media/earth.619579a6993220b2e60c.webp",
+    "static/media/logoIcon.svg": "/TestTask/static/media/logoIcon.f4153131d3955bdfa609912a9f3b5caf.svg",
+    "index.html": "/TestTask/index.html",
+    "main.d249e1aa.css.map": "/TestTask/static/css/main.d249e1aa.css.map",
+    "main.0e03669f.js.map": "/TestTask/static/js/main.0e03669f.js.map"
   },
   "entrypoints": [
-    "static/css/main.595ba659.css",
-    "static/js/main.90451fed.js"
+    "static/css/main.d249e1aa.css",
+    "static/js/main.0e03669f.js"
   ]
 }
