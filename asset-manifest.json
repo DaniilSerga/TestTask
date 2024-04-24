@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TestTask/static/css/main.d249e1aa.css",
-    "main.js": "/TestTask/static/js/main.0e03669f.js",
+    "main.css": "/TestTask/static/css/main.5125adab.css",
+    "main.js": "/TestTask/static/js/main.fa487887.js",
     "static/media/background.webp": "/TestTask/static/media/background.11732c5e5d49646804f2.webp",
     "static/media/rocketIcon.svg": "/TestTask/static/media/rocketIcon.a4389852c90b9d43571cac86eea0e8ab.svg",
     "static/media/cardBackground4.webp": "/TestTask/static/media/cardBackground4.0fd3697be3b44a1d0235.webp",
@@ -11,11 +11,11 @@
     "static/media/earth.webp": "/TestTask/static/media/earth.619579a6993220b2e60c.webp",
     "static/media/logoIcon.svg": "/TestTask/static/media/logoIcon.f4153131d3955bdfa609912a9f3b5caf.svg",
     "index.html": "/TestTask/index.html",
-    "main.d249e1aa.css.map": "/TestTask/static/css/main.d249e1aa.css.map",
-    "main.0e03669f.js.map": "/TestTask/static/js/main.0e03669f.js.map"
+    "main.5125adab.css.map": "/TestTask/static/css/main.5125adab.css.map",
+    "main.fa487887.js.map": "/TestTask/static/js/main.fa487887.js.map"
   },
   "entrypoints": [
-    "static/css/main.d249e1aa.css",
-    "static/js/main.0e03669f.js"
+    "static/css/main.5125adab.css",
+    "static/js/main.fa487887.js"
   ]
 }
