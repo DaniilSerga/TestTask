@@ -86,7 +86,7 @@ $CHINESE_BLACK: #0F1420;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
-  transition: background-position 0.3s ease-in-out;
+  transition: background-position 0.2s ease-in-out;
 
   &:hover {
     background-position: left center;
@@ -98,7 +98,7 @@ $CHINESE_BLACK: #0F1420;
   font-family: Lato;
   font-weight: 700;
   font-size: 26px;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 .text--bold {
@@ -106,7 +106,7 @@ $CHINESE_BLACK: #0F1420;
   font-family: Lato;
   font-weight: 800;
   font-size: 26px;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 .banner__text-heading {
@@ -172,7 +172,7 @@ $CHINESE_BLACK: #0F1420;
   background-color: $CHARTREUSE;
   border-radius: 100px;
   border-width: 0;
-  transition: all 0.3s;
+  transition: all 0.2s;
 
   & > span {
     color: $BLACK;
@@ -320,7 +320,7 @@ $CHINESE_BLACK: #0F1420;
     font-size: 20px;
     font-weight: 800;
     line-height: 24px;
-    transition: all 0.3s;
+    transition: all 0.2s;
 
     &:hover {
       color: rgba($CHARTREUSE, 0.6)
