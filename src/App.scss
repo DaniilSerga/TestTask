@@ -428,7 +428,7 @@ main {
   }
   
   @include mobile {
-    max-width: 317px;
+    max-width: 320px;
     
     & > h2 {
       font-size: 18px;
@@ -543,7 +543,7 @@ main {
 .offers__section--info {
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  // gap: 17px;
   margin-top: 22px;
 
   & > h2 {
@@ -555,6 +555,7 @@ main {
 
   & > p,
   & > div > p {
+    margin-top: 17px;
     color: rgba($WHITE, 0.6);
     font-weight: 700;
     font-size: 20px;
@@ -562,6 +563,7 @@ main {
   }
 
   & > label {
+    margin-top: 17px;
     cursor: pointer;
     max-width: fit-content;
     color: $CHARTREUSE;
@@ -586,11 +588,13 @@ main {
 
     & > p,
     & > div > p {
+      margin-top: 13px;
       font-size: 16px;
       line-height: 19.2px;
     }
 
     & > label {
+      margin-top: 20px;
       font-size: 16px;
       font-weight: 800;
       line-height: 19.2px;
@@ -607,11 +611,13 @@ main {
 
     & > p,
     & > div > p {
+      margin-top: 20px;
       font-size: 14px;
       line-height: 16.8px;
     }
 
     & > label {
+      margin-top: 20px;
       font-size: 14px;
       font-weight: 800;
       line-height: 16.8px;

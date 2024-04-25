@@ -140,9 +140,6 @@ const App = () => {
               </p>
 
               <input className="expand-text-input" id="expand-text" type="checkbox" />
-              <label htmlFor="expand-text">Read more</label>
-              <label htmlFor="expand-text">Read less</label>
-
               <div className="expandible-text">
                 <p>
                   Embark on a celestial odyssey that will ignite your soul and leave an indelible mark on your existence. 
@@ -153,6 +150,9 @@ const App = () => {
                   transformative experience that will forever alter your perspective on the universe and your place within it.
                 </p>
               </div>
+
+              <label htmlFor="expand-text">Read more</label>
+              <label htmlFor="expand-text">Read less</label>
             </div>
           </div>
         </section>
