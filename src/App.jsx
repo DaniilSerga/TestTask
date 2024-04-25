@@ -30,25 +30,25 @@ const App = () => {
           </div>
           <div className="navbar__wrapper">
             <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
+            <label className="menu__btn" htmlFor="menu__toggle">
               <img src={menuIcon} alt="Open menu" />
               <img src={closeIcon} alt="Open menu" />
             </label>
 
-            <nav id="aaa" className="navbar">
+            <nav className="navbar">
               <li className="navbar__item" onClick={() => handleScrollToSection(homeSection)}>
                 <a href="#home" className="text-link">
-                  <label class="menu__btn" for="menu__toggle">Home</label>
+                  <label className="menu__btn" htmlFor="menu__toggle">Home</label>
                 </a>  
               </li>
               <li className="navbar__item" onClick={() => handleScrollToSection(productsSection)}>
                 <a href="#products" className="text-link">
-                  <label class="menu__btn" for="menu__toggle">Products</label>
+                  <label className="menu__btn" htmlFor="menu__toggle">Products</label>
                 </a>
               </li>
               <li className="navbar__item">
                 <a href="#">
-                  <label class="menu__btn" for="menu__toggle">
+                  <label className="menu__btn" htmlFor="menu__toggle">
                     <svg width="24px" height="20px" viewBox="0 0 24 20" enableBackground="new 0 0 24 20">
                       <defs>
                         <linearGradient id="gradient" gradientUnits="userSpaceOnUse" fy="90%">

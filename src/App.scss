@@ -35,10 +35,9 @@ main {
   }
 }
 
-// ------------------------------------------------------------------
+// TODO: animation ------------------------------------------------------------------
 
-#menu__toggle,
-.menu__btn {
+#menu__toggle {
   display: none;
 
   @include mobile {
@@ -46,9 +45,17 @@ main {
   }
 }
 
-.navbar__wrapper #menu__toggle  {
-  visibility: hidden;
+.navbar__wrapper > .menu__btn {
+  display: none;
 
+  @include mobile {
+    display: inline;
+  }
+}
+
+.navbar__wrapper > #menu__toggle  {
+  visibility: hidden;
+  
   & ~ label {
     position: fixed;
     top: 5px;
@@ -75,7 +82,7 @@ main {
       display: none;
     }
   }
-
+xs
   &:checked ~ .navbar {
     position: fixed;
     z-index: 2;
@@ -122,6 +129,12 @@ main {
     z-index: 2;
     width: 100%;
     padding: 12px 20px;
+
+    // FIX: max width header
+    // & > div {
+    //   position: relative;
+    //   max-width: 320px;
+    // }
   }
 }
 
@@ -217,6 +230,12 @@ main {
     font-size: 48px;
     line-height: 48px;
   }
+
+  @include mobile {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
 }
 
 .text-subheading {
@@ -228,6 +247,12 @@ main {
   @include tablet {
     font-size: 22px;
     line-height: 26.4px;
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 19.2px;
+    text-align: center;
   }
 }
 
@@ -253,6 +278,11 @@ main {
   @include tablet {
     padding: 100px 30px;
     align-items: flex-start;
+  }
+
+  @include mobile {
+    padding: 250px 34px 44px;
+    align-items: center;
   }
 }
 
@@ -298,6 +328,25 @@ main {
       }
     }
   }
+
+  @include mobile {
+    position: unset;
+    max-width: 292px;
+
+    & > div:first-child {
+      justify-content: center;
+      align-items: center;
+    }
+
+    & > div:last-child {
+      top: -117px;
+      left: 0;
+      right: 0;
+      margin-left: auto; 
+      margin-right: auto; 
+      width: 299.5px;
+    }
+  }
 }
 
 .button {
@@ -317,6 +366,15 @@ main {
 
   &:hover {
     opacity: 0.6;
+  }
+
+  @include mobile {
+    padding: 7px 40px;
+
+    & > span {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
   }
 }
 
