@@ -125,7 +125,7 @@ main {
     }
   }
 
-  &:checked ~ .navbar {
+  & ~ .navbar {
     @include mobile {
       position: fixed;
       z-index: 2;
@@ -135,9 +135,18 @@ main {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      max-height: 0;
+      height: 100%;
       width: 100vw;
       background: linear-gradient(190.34deg, #0D1E48 0.28%, #304571 100%);
+      overflow: hidden;
+      transition: max-height 0.3s;
+    }
+  }
+
+  &:checked ~ .navbar {
+    @include mobile {
+      max-height: 100vh;
     }
   }
 }
