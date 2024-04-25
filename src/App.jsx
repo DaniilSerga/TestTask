@@ -105,7 +105,7 @@ const App = () => {
               </div>
               <div className="offer__card">
                 <h3>Space is not<br/>just stars and<br/>planets</h3>
-                <h4>Go on a space adventure</h4>
+                <h4>it is a majestic journey to</h4>
                 <button className="button__outlined">
                   <span>Learn more</span>
                 </button>
