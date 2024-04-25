@@ -47,7 +47,7 @@ const App = () => {
                 </a>
               </li>
               <li className="navbar__item">
-                <a href="#">
+                <a href="#home">
                   <label className="menu__btn" htmlFor="menu__toggle">
                     <svg width="24px" height="20px" viewBox="0 0 24 20" enableBackground="new 0 0 24 20">
                       <defs>

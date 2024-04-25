@@ -1,0 +1,16 @@
+@mixin tablet {
+    @media (max-width: 1247px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  
+  @mixin card-background {
+    background-position: center center;
+    background-size: cover;
+  }

@@ -1,31 +1,6 @@
-@mixin tablet {
-  @media (max-width: 1247px) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin card-background {
-  background-position: center center;
-  background-size: cover;
-}
-
-$ROSE_PINK: #FF70D9;
-$CHARTREUSE: #EBFF00;
-$POLICE_BLUE: #304571;
-$BLACK: #000000;
-$WHITE: #FFFFFF;
-$CHINESE_BLACK: #0F1420;
-
-$cardBackground1: url('./assets/images/cardBackground1.webp');
-$cardBackground2: url('./assets/images/cardBackground2.webp');
-$cardBackground3: url('./assets/images/cardBackground3.webp');
-$cardBackground4: url('./assets/images/cardBackground4.webp');
+@import './style/colors';
+@import './style/mixins';
+@import './style/variables';
 
 main {
   background: linear-gradient(196.2deg, #0D1E48 0%, #304571 100%);
@@ -35,8 +10,7 @@ main {
   }
 }
 
-// TODO: animation ------------------------------------------------------------------
-
+// SECTION: Burger menu
 #menu__toggle {
   display: none;
 
@@ -84,22 +58,22 @@ main {
   }
 
   &:checked ~ .navbar {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(190.34deg, #0D1E48 0.28%, #304571 100%);
+    @include mobile {
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background: linear-gradient(190.34deg, #0D1E48 0.28%, #304571 100%);
+    }
   }
 }
-
-// ------------------------------------------------------------------
-
+// endsection
 
 .header {
   display: flex;
@@ -130,11 +104,9 @@ main {
     width: 100%;
     padding: 12px 20px;
 
-    // FIX: max width header
-    // & > div {
-    //   position: relative;
-    //   max-width: 320px;
-    // }
+    & > div {
+      max-width: unset;
+    }
   }
 }
 
@@ -168,7 +140,7 @@ main {
   }
 }
 
-.navbar__item > a > svg {
+.navbar__item > a > label > svg {
   display: inline-block;
 
   & > defs > linearGradient > stop {
@@ -176,7 +148,7 @@ main {
   }
 }
 
-.navbar__item > a:hover > svg {
+.navbar__item > a:hover > label > svg {
   display: inline-block;
   
   & > defs > linearGradient > stop:first-child {
@@ -190,7 +162,6 @@ main {
 
 .text-link {
   color: $WHITE;
-  font-family: Lato;
   font-size: 18px;
   line-height: 21.6px;
   text-decoration: none;
@@ -204,6 +175,10 @@ main {
   text-fill-color: transparent;
   transition: background-position 0.2s ease-in-out;
 
+  & > label {
+    cursor: pointer;
+  }
+
   &:hover {
     background-position: left center;
   }
@@ -215,7 +190,6 @@ main {
 
 .text--bold {
   color: $WHITE;
-  font-family: Lato;
   font-weight: 800;
   font-size: 26px;
   transition: color 0.2s;
@@ -334,6 +308,7 @@ main {
     max-width: 292px;
 
     & > div:first-child {
+      gap: 17px;
       justify-content: center;
       align-items: center;
     }
