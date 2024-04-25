@@ -126,6 +126,7 @@ const App = () => {
               </div>
             </div>
 
+            {/* ADDITIONAL INFO */}
             <div className="offers__section--info">
               <h2>Embark on a space journey</h2>
               <p>
@@ -137,7 +138,18 @@ const App = () => {
                 your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for 
                 space excursions.
               </p>
-              <span>Read more</span>
+              <input className="expand-texts-input" id="expandText" type="checkbox" />
+              <label htmlFor="expandText">Read more</label>
+              <div className="expandible-text">
+                <p>
+                  Embark on a celestial odyssey that will ignite your soul and leave an indelible mark on your existence. 
+                  Our meticulously crafted space expeditions cater to every level of space enthusiast, from aspiring astronauts 
+                  to seasoned space travelers. Whether you seek to witness the ethereal beauty of distant planets or unravel 
+                  the enigmatic mysteries of the cosmos, our expert team will guide you through an unforgettable journey. With 
+                  safety and comfort as our utmost priorities, we ensure that your space adventure is an extraordinary and 
+                  transformative experience that will forever alter your perspective on the universe and your place within it.
+                </p>
+              </div>
             </div>
           </div>
         </section>

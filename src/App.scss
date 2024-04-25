@@ -10,6 +10,74 @@ main {
   }
 }
 
+// SECTION: Common
+.text--bold {
+  color: $WHITE;
+  font-weight: 800;
+  font-size: 26px;
+  transition: color 0.2s;
+}
+
+.text--highlighted {
+  color: $ROSE_PINK;
+}
+
+.text--highlighted--variant {
+  color: $CHARTREUSE;
+}
+
+.button {
+  cursor: pointer;
+  padding: 14px 40px;
+  background-color: $CHARTREUSE;
+  border-radius: 100px;
+  border-width: 0;
+  transition: all 0.2s;
+
+  & > span {
+    color: $BLACK;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.4px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @include mobile {
+    padding: 7px 40px;
+
+    & > span {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+  }
+}
+
+.button__outlined {
+  @extend .button;
+  
+  background-color: transparent;
+  border: 2px solid $CHARTREUSE; 
+  outline: none;
+  
+  & > span {
+    color: $CHARTREUSE;
+  }
+  
+  @include tablet {
+    padding: 7px 40px;
+    
+    & > span {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19.2px;
+    }
+  }
+}
+// ENDSECTION: Common
+
 // SECTION: Burger menu
 #menu__toggle {
   display: none;
@@ -73,8 +141,9 @@ main {
     }
   }
 }
-// endsection
+// ENDSECTION: Burger menu
 
+// SECTION: Header
 .header {
   display: flex;
   justify-content: center;
@@ -131,13 +200,13 @@ main {
   gap: 53px;
   list-style: none;
 
-  & > li {
-    cursor: pointer;
-  }
-
   @include mobile {
     display: none;
   }
+}
+
+.navbar__item > a > label {
+  cursor: pointer;
 }
 
 .navbar__item > a > label > svg {
@@ -172,12 +241,7 @@ main {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   transition: background-position 0.2s ease-in-out;
-
-  & > label {
-    cursor: pointer;
-  }
 
   &:hover {
     background-position: left center;
@@ -187,57 +251,9 @@ main {
     font-weight: 800;
   }
 }
+// ENDSECTION: Header
 
-.text--bold {
-  color: $WHITE;
-  font-weight: 800;
-  font-size: 26px;
-  transition: color 0.2s;
-}
-
-.banner__text-heading {
-  color: $WHITE;
-  font-size: 72px;
-  font-weight: 800;
-
-  @include tablet {
-    font-size: 48px;
-    line-height: 48px;
-  }
-
-  @include mobile {
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-  }
-}
-
-.text-subheading {
-  color: $WHITE;
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 38.4px;
-
-  @include tablet {
-    font-size: 22px;
-    line-height: 26.4px;
-  }
-
-  @include mobile {
-    font-size: 16px;
-    line-height: 19.2px;
-    text-align: center;
-  }
-}
-
-.text--highlighted {
-  color: $ROSE_PINK;
-}
-
-.text--highlighted--variant {
-  color: $CHARTREUSE;
-}
-
+// SECTION: Banner
 .banner {
   position: relative;
   display: flex;
@@ -324,57 +340,43 @@ main {
   }
 }
 
-.button {
-  cursor: pointer;
-  padding: 14px 40px;
-  background-color: $CHARTREUSE;
-  border-radius: 100px;
-  border-width: 0;
-  transition: all 0.2s;
+.banner__text-heading {
+  color: $WHITE;
+  font-size: 72px;
+  font-weight: 800;
 
-  & > span {
-    color: $BLACK;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 26.4px;
-  }
-
-  &:hover {
-    opacity: 0.6;
+  @include tablet {
+    font-size: 48px;
+    line-height: 48px;
   }
 
   @include mobile {
-    padding: 7px 40px;
-
-    & > span {
-      font-size: 16px;
-      line-height: 19.2px;
-    }
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
   }
 }
 
-.button__outlined {
-  @extend .button;
-
-  background-color: transparent;
-  border: 2px solid $CHARTREUSE; 
-  outline: none;
-
-  & > span {
-    color: $CHARTREUSE;
-  }
+.text-subheading {
+  color: $WHITE;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 38.4px;
 
   @include tablet {
-    padding: 7px 40px;
+    font-size: 22px;
+    line-height: 26.4px;
+  }
 
-    & > span {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 19.2px;
-    }
+  @include mobile {
+    font-size: 16px;
+    line-height: 19.2px;
+    text-align: center;
   }
 }
+// ENDSECTION: Banner
 
+// SECTION: Offers
 .offers__section {
   display: flex;
   align-items: center;
@@ -540,7 +542,9 @@ main {
     z-index: 1;
   }
 }
+// ENDSECTION: Offers
 
+// SECTION: Offers info
 .offers__section--info {
   display: flex;
   flex-direction: column;
@@ -554,15 +558,17 @@ main {
     line-height: 38.4px;
   }
 
-  & > p {
+  & > p,
+  & > div > p {
     color: rgba($WHITE, 0.6);
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
   }
 
-  & > span {
+  & > label {
     cursor: pointer;
+    max-width: fit-content;
     color: $CHARTREUSE;
     font-size: 20px;
     font-weight: 800;
@@ -583,12 +589,13 @@ main {
       line-height: 28.8px;
     }
 
-    & > p {
+    & > p,
+    & > div > p {
       font-size: 16px;
       line-height: 19.2px;
     }
 
-    & > span {
+    & > label {
       font-size: 16px;
       font-weight: 800;
       line-height: 19.2px;
@@ -603,12 +610,13 @@ main {
       line-height: 21.6px;
     }
 
-    & > p {
+    & > p,
+    & > div > p {
       font-size: 14px;
       line-height: 16.8px;
     }
 
-    & > span {
+    & > label {
       font-size: 14px;
       font-weight: 800;
       line-height: 16.8px;
@@ -616,6 +624,22 @@ main {
   }
 }
 
+.expand-texts-input {
+  display: none;
+}
+
+.expand-texts-input:checked ~ .expandible-text {
+  max-height: 200px;
+}
+
+.expandible-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+// ENDSECTION: Offers info
+
+// SECTION: Footer
 .footer {
   display: flex;
   flex-direction: column;
@@ -638,3 +662,4 @@ main {
     padding-bottom: 19px;
   }
 }
+// ENDSECTION: Footer
