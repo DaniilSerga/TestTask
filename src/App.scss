@@ -612,6 +612,24 @@ main {
 
 .expand-texts-input {
   display: none;
+
+  &:checked {
+    & ~ label:first-of-type {
+      display: none;
+    }
+
+    & ~ label:last-of-type {
+      display: inline;
+    }
+  }
+  
+  & ~ label:first-of-type {
+    display: inline;
+  }
+
+  & ~ label:last-of-type {
+    display: none;
+  }
 }
 
 .expand-texts-input:checked ~ .expandible-text {

@@ -138,8 +138,11 @@ const App = () => {
                 your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for 
                 space excursions.
               </p>
-              <input className="expand-texts-input" id="expandText" type="checkbox" />
-              <label htmlFor="expandText">Read more</label>
+
+              <input className="expand-texts-input" id="expand-text" type="checkbox" />
+              <label htmlFor="expand-text">Read more</label>
+              <label htmlFor="expand-text">Read less</label>
+
               <div className="expandible-text">
                 <p>
                   Embark on a celestial odyssey that will ignite your soul and leave an indelible mark on your existence. 
