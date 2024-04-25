@@ -139,7 +139,7 @@ const App = () => {
                 space excursions.
               </p>
 
-              <input className="expand-texts-input" id="expand-text" type="checkbox" />
+              <input className="expand-text-input" id="expand-text" type="checkbox" />
               <label htmlFor="expand-text">Read more</label>
               <label htmlFor="expand-text">Read less</label>
 

@@ -632,7 +632,7 @@ main {
   }
 }
 
-.expand-texts-input:checked ~ .expandible-text {
+.expand-text-input:checked ~ .expandible-text {
   max-height: 200px;
 }
 
