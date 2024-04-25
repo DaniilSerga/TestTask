@@ -1,4 +1,6 @@
-$cardBackground1: url('./assets/images/cardBackground1.webp');
-$cardBackground2: url('./assets/images/cardBackground2.webp');
-$cardBackground3: url('./assets/images/cardBackground3.webp');
-$cardBackground4: url('./assets/images/cardBackground4.webp');
+$cardBackground1: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%), url('./assets/images/cardBackground1.webp');
+$cardBackground2: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%), url('./assets/images/cardBackground2.webp');
+$cardBackground3: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%), url('./assets/images/cardBackground3.webp');
+$cardBackground4: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%), url('./assets/images/cardBackground4.webp');
+
+$backgroundsList: $cardBackground1, $cardBackground2, $cardBackground3, $cardBackground4, 

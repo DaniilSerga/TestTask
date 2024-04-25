@@ -434,24 +434,10 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   
-  & > div:nth-child(1) {
-    background: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%), $cardBackground1;
-    @include card-background;
-  }
-  
-  & > div:nth-child(2) {
-    background: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%), $cardBackground2;
-    @include card-background;
-  }
-
-  & > div:nth-child(3) {
-    background: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%), $cardBackground3;
-    @include card-background;
-  }
-
-  & > div:nth-child(4) {
-    background: linear-gradient(180deg, rgba($BLACK, 0) 0%, rgba($CHINESE_BLACK, 0.79) 100%), $cardBackground4;
-    @include card-background;
+  @for $i from 1 to 5 {
+    & > div:nth-child(#{$i}) {
+      @include card-background($i);
+    }
   }
 
   & > div:first-child,
